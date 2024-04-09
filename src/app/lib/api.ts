@@ -1,4 +1,4 @@
-export default {
+const openAPI = {
   openapi: "3.0.0",
   info: {
     title: "Rick and Morty API",
@@ -349,3 +349,4 @@ export default {
     },
   },
 };
+export default openAPI;

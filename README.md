@@ -38,6 +38,10 @@ This is a Rick and Morty and Unsplash API documentation bootstrapped with [Next.
 | GET   | /topics/{page}        | get a topic by page number  
 | GET   | /topics/{id_or_slug}/photos         | get a topic's photo 
 
+## lIVE Preview
+The project has been deployed to Vercel and here is the [Live link](https://rm-u-api-cookbook.vercel.app/)
+
+
 ### Technologies & Languages
 * [NextJs](https://nextjs.org/)
 * [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) 
