@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## RM & U API Cookbook
+This is a Rick and Morty and Unsplash API documentation bootstrapped with [Next.js](https://nextjs.org/)
 
-## Getting Started
+### Author : Anita Kahenya April 2024
 
-First, run the development server:
+## Endpoints Available
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Rick and Morty
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Method | Endpoint            | Description                       
+| ------ | ------------------- | --------------------------------- 
+| GET   | /location            | get all locations                    
+| GET   | /location/{id}       | get location by id                   
+| GET   | /location/1,13,5     | get multiple locations by id         
+| GET   | /character/{id}      | get a character by id                
+| GET   | /characters          | get all characters                     
+| GET   | /character/3, 15,24  | get multiple characters by ids        
+| GET   | /episode/{id}        | get episode by id        
+| GET   | /episode             | get all episodes
+| GET   | /episode/2,13,20     | get multiple episodes by ids     
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 2. Unsplash 
 
-## Learn More
+| Method | Endpoint            | Description                       
+| ------ | ------------------- | --------------------------------- 
+| GET   | /photos            | get all photos                    
+| GET   | /photos/{id}       | get a photo by id                   
+| GET   | /photos/random     | get a random photo        
+| GET   | /photos/{id}/statistics      | get photo statistics               
+| GET   | /photos/{id}/download          | download a photo by id                     
+| GET   | /search/photos      | Search photo by page and keyword       
+| GET   | /search/collection   | Search photo by page number and collection name        
+| GET   | /search/users         | search photo by username and page number
+| GET   | /collections          | get collection by page number   
+| GET   | /collections/{id}     | get collection by id 
+| GET   | /topics/{id_or_slug}  | get topic by id or slug  
+| GET   | /topics/{page}        | get a topic by page number  
+| GET   | /topics/{id_or_slug}/photos         | get a topic's photo 
 
-To learn more about Next.js, take a look at the following resources:
+### Technologies & Languages
+* [NextJs](https://nextjs.org/)
+* [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) 
+* [Apidog](https://apidog.com/)
+* Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
+* [Vercel](https://vercel.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SetUp Instruction
+1. Clone the repository using `git clone`
+2.  Navigate to the project folder
+3.  Install dependencies by running `npm install` or `yarn install`.
+4.  Run the development  server with `npm run dev` or `yarn dev`.
+5.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   
+## Contributing and Making Changes
+1.  Create a new branch in your terminal `git checkout -b improve-feature`
+2. Make necessary changes on the codebase
+2.  Run the development  server with `npm run dev` or `yarn dev` to see the changes.
+3.  Add the changes and commit them `git commit -am "Improve App"`
+4.  Push to the branch `git push origin improve-app` and open a new pull request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Known Bugs
+There are no known bugs
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+*****
+## Contact Information
+* Email : anitakahenya1@gmail.com
+*****
+## [License](LICENSE)
+MIT License
+Copyright (c) 2024 Anita Kahenya
