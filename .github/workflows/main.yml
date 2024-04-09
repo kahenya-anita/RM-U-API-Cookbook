@@ -1,5 +1,7 @@
 name: CI linting
-on: [push pull_request]
+
+#Trigger action on Git Push or Pull Request
+on: [push, pull_request]
 permissions:
   pull-requests: write
   contents: read
