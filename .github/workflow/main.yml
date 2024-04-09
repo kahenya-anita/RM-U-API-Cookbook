@@ -1,5 +1,5 @@
 name: CI linting
-on: [pull_request]
+on: [push pull_request]
 permissions:
   pull-requests: write
   contents: read
@@ -12,5 +12,4 @@ jobs:
         with:
           reporter: github-pr-review
           fail_on_error: true
-          workdir: client
           eslint_flags: --ignore-path .gitignore "src/**/*.+(ts|js|tsx)"
