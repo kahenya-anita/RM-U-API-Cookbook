@@ -1,4 +1,4 @@
-name: linting
+name: CI linting
 on: [pull_request]
 permissions:
   pull-requests: write
@@ -8,14 +8,6 @@ jobs:
     name: runner / eslint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Generate SDK
-        run: |
-          cd client
-          npm install
-          npm run orval
-
       - uses: reviewdog/action-eslint@v1
         with:
           reporter: github-pr-review
