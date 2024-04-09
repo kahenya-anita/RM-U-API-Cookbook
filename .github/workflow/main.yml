@@ -1,0 +1,24 @@
+name: linting
+on: [pull_request]
+permissions:
+  pull-requests: write
+  contents: read
+jobs:
+  eslint:
+    name: runner / eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Generate SDK
+        run: |
+          cd client
+          npm install
+          npm run orval
+
+      - uses: reviewdog/action-eslint@v1
+        with:
+          reporter: github-pr-review
+          fail_on_error: true
+          workdir: client
+          eslint_flags: --ignore-path .gitignore "src/**/*.+(ts|js|tsx)"
